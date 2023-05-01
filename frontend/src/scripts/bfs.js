@@ -37,14 +37,12 @@ const  BFS = (start, end)=> {
   // Caso não seja possível encontrar um caminho
   return null;
 }
-// console.log(Graphs)
 const result = (new_path)=> {
 
   const path = [];
   new_path.map((item)=>{
     Graphs.map((itenzin)=>{
           if(item == parseInt(itenzin.id)){
-            // console.log(item.id,itenzin)
               const element = {
                   id: itenzin.id,
                   name: itenzin.name
@@ -56,7 +54,6 @@ const result = (new_path)=> {
       
       
   })
-   console.log(path)
  return path  
 
 }

@@ -1,7 +1,6 @@
 import BFS from "../scripts/bfs";
 import mapImage from    "../assets/images/map.png"
 import Header from "../components/header"
-import Graphs from "../__db__/stations";
 
 
 const Home =  () => {
@@ -15,7 +14,7 @@ const Home =  () => {
     
 
     <>
-    <Header options = {Graphs}/>
+    <Header/>
     <img 
             width={1000}
             src={mapImage}

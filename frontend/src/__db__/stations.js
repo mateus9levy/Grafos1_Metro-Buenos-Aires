@@ -254,7 +254,7 @@ const Graphs = [
     },
     {
         id: "35",
-        name: "Juan Manuel de ROsas Villa Urquiza",
+        name: "Juan Manuel de Rosas Villa Urquiza",
         line: "B",
         color: "Red",
         list_neighbor: [34]
