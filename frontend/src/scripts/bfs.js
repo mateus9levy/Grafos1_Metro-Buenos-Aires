@@ -1,5 +1,6 @@
+import Graphs from "../__db__/stations";
 
-const  BFS = (start, end, graphs)=> {
+const  BFS = (start, end)=> {
 
   let visited = new Set();    // Conjunto de nós visitados
   let queue = [[start]];      // Fila de nós a serem visitados
@@ -16,13 +17,14 @@ const  BFS = (start, end, graphs)=> {
     // Verifica se o nó já foi visitado
     if (!visited.has(node)) {
       // Percorre todos os vizinhos do nó atual
-      for (let i = 0; i < graphs[node].list_neighbor.length; i++) {
-        let neighbor = graphs[node].list_neighbor[i];
+      for (let i = 0; i < Graphs[node].list_neighbor.length; i++) {
+        let neighbor = Graphs[node].list_neighbor[i];
         let new_path = [...path, neighbor]; // Cria um novo caminho com o vizinho
         
         // Verifica se o vizinho é o nó final
         if (neighbor === end) {
-          return new_path;
+          const path = result(new_path);
+          return path;
         } else {
           queue.push(new_path); // Adiciona o novo caminho na fila
         }
@@ -36,5 +38,22 @@ const  BFS = (start, end, graphs)=> {
   return null;
 }
 
+const result = (new_path)=> {
 
+  const path = [];
+  Graphs.map((item)=>{
+    new_path.map((itenzin)=>{
+          if(itenzin == parseInt(item.id)){
+              const element = {
+                  name: item.name
+              }
+              path.push(element)
+          }
+      })
+  
+      
+  })
+ return path  
+
+}
 export default BFS
