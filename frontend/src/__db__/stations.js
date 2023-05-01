@@ -72,7 +72,7 @@ const Graphs = [
         name: "Plaza Miserere",     // A
         line: "A",
         color: "Blue",
-        list_neighbor: [8, 10, 83]
+        list_neighbor: [8, 10, 83, 84]
     },
     {
         id: "10",
@@ -367,7 +367,7 @@ const Graphs = [
         name: "Pueyrredón - Green", //A
         line: "D",
         color: "Green",
-        list_neighbor: [48, 50,80,81]
+        list_neighbor: [48, 50, 80, 81]
     },
     {
         id: "50",
@@ -596,7 +596,7 @@ const Graphs = [
         name: "Córdoba",
         line: "E",
         color: "Yellow",
-        list_neighbor: [80, 82,49]
+        list_neighbor: [82,49]
     },
     {
         id: "82",
@@ -617,7 +617,7 @@ const Graphs = [
         name: "Venezuela",
         line: "E",
         color: "Yellow",
-        list_neighbor: [83, 85]
+        list_neighbor: [9, 85]
     },
     {
         id: "85",

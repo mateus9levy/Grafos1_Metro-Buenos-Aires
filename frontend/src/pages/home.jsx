@@ -1,22 +1,36 @@
 import BFS from "../scripts/bfs";
-
-import { useEffect } from "react";
-import { element } from "prop-types";
-
+import mapImage from    "../assets/images/map.png"
+import Header from "../components/header"
+import Graphs from "../__db__/stations";
 
 
 const Home =  () => {
 
 
-        const result = BFS(89,62);
+        const result = BFS(33,42);
         if(!result){
             console.log("nao encontrado")
         }
     return(
+    
 
-        <div className="App">
-            <h1>Hello World</h1>
-        </div>    
+    <>
+    <Header options = {Graphs}/>
+    <img 
+            width={1000}
+            src={mapImage}
+            alt="map" />
+    </>
+           
+            
+            
+
+
+
+        
+
+
+        
         
         
     );
