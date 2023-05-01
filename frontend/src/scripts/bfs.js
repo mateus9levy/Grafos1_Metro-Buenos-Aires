@@ -24,7 +24,10 @@ const  BFS = (start, end)=> {
         // Verifica se o vizinho é o nó final
         if (neighbor === end) {
           const path = result(new_path);
-          return path;
+          const message = getPath(path)
+
+
+          return message;
         } else {
           queue.push(new_path); // Adiciona o novo caminho na fila
         }
@@ -45,7 +48,9 @@ const result = (new_path)=> {
           if(item == parseInt(itenzin.id)){
               const element = {
                   id: itenzin.id,
-                  name: itenzin.name
+                  name: itenzin.name,
+                  line: itenzin.line,
+                  color: itenzin.color,
               }
              
               path.push(element)
@@ -57,4 +62,29 @@ const result = (new_path)=> {
  return path  
 
 }
+
+
+const getPath = (path) =>{
+  let initalLine = path[0].line
+  let message = `Comece em ${path[0].name} na Linha ${path[0].color}, ` 
+ 
+  path.map((element,id)=> {
+    if(element.line != initalLine){
+      initalLine = element.line
+      //chegada de uma estacao de outra linha.
+      message = message + ` ande até a Estação ${path[id-1].name} e continue na linha "${element.line}" em direção a estação ${element.name} `
+
+      //Pegar outra linha
+    }
+    const currentLine = element.line; 
+  
+    if(id == path.length){
+      message = message + `chegando em ${element.name}`
+    }
+  })
+
+  return message
+
+}
+
 export default BFS

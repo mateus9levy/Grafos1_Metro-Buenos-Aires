@@ -1,29 +1,36 @@
-import BFS from "../scripts/bfs";
+
 import mapImage from    "../assets/images/map.png"
-import Header from "../components/header"
-
-
+import { useContext } from "react";
+import { useHeaderData } from "../context/HeaderContext";
+import { Grid } from "@mui/material";
 const Home =  () => {
-
-
-        const result = BFS(33,42);
-        if(!result){
-            console.log("nao encontrado")
-        }
+    const {headerData} = useHeaderData()
+    const message = headerData.message
     return(
     
-
     <>
-    <Header/>
-    <img 
+        <Grid item container>
+        <h3>
+            {message}
+        </h3>
+        <Grid item marginY={10}>
+        <img 
             width={1000}
             src={mapImage}
-            alt="map" />
-    </>
-           
-            
-            
+        > 
+        </img> 
+        </Grid>
+        
 
+        </Grid>
+        
+
+
+    </>
+       
+        
+    
+        
 
 
         
