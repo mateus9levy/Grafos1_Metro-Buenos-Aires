@@ -8,9 +8,10 @@ import { element } from "prop-types";
 const Home =  () => {
 
 
-        const result = BFS(0,36);
-        console.log(result)
-
+        const result = BFS(89,62);
+        if(!result){
+            console.log("nao encontrado")
+        }
     return(
 
         <div className="App">
