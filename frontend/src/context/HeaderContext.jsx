@@ -4,7 +4,7 @@ const HeaderContext = createContext();
 
 export const HeaderProvider = ({ children }) => {
   const [headerData, setHeaderData] = useState({
-    message: 'Mensagem de exemplo',
+    message: '',
   });
 
   return (

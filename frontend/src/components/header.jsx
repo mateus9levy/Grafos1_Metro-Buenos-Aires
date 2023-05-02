@@ -8,14 +8,12 @@ import { useHeaderData } from "../context/HeaderContext"
 
 const Header = () => {
     const { headerData, setHeaderData } = useHeaderData();
-
     const [start,setStart] = useState(-1)
     const [end,setEnd] = useState(-1)
-    // console.log(start)
+
     const handleChangeStart = (event) => {
         setStart(event.target.value);
       };
-
 
     const handleChangeEnd = (event) => {
         setEnd(event.target.value)
@@ -33,13 +31,9 @@ const Header = () => {
             setHeaderData({ ...headerData, message: `${path}` });
             return path
         }
-        
     }
-
     
     return(
-    
-   
         <div className="navbar">
             <img 
                 width={100}
@@ -74,26 +68,16 @@ const Header = () => {
                     
                 </Grid>  
                 <Grid container item xs={6} sm={3} >
-                        <Button 
+                    <Button 
                         variant="contained"
                         color='primary' onClick={()=>{
                         result(start,end)
                         }}>
                         Buscar
-                        </Button>
-                    </Grid>
-            
-          
+                    </Button>
+                </Grid>
         </div>
-
-        
-        
-        
     )
-
-
-
-
 }
 
 

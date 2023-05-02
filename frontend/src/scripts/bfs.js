@@ -25,8 +25,6 @@ const  BFS = (start, end)=> {
         if (neighbor === end) {
           const path = result(new_path);
           const message = getPath(path)
-
-
           return message;
         } else {
           queue.push(new_path); // Adiciona o novo caminho na fila
@@ -66,22 +64,20 @@ const result = (new_path)=> {
 
 const getPath = (path) =>{
   let initalLine = path[0].line
-  let message = `Comece em ${path[0].name} na Linha ${path[0].color}, ` 
+  let message = `Comece em ${path[0].name} na Linha ${path[0].line}` 
  
   path.map((element,id)=> {
     if(element.line != initalLine){
       initalLine = element.line
-      //chegada de uma estacao de outra linha.
-      message = message + ` ande até a Estação ${path[id-1].name} e continue na linha "${element.line}" em direção a estação ${element.name} `
+      message = message + ` ande até a Estação ${path[id-1].name} e continue na
+                            linha "${element.line}" e siga em direção a estação ${element.name}, `
 
-      //Pegar outra linha
     }
-    const currentLine = element.line; 
-  
-    if(id == path.length){
-      message = message + `chegando em ${element.name}`
-    }
+    
   })
+  message = message + `desça em ${path[path.length-1].name}`
+  
+   
 
   return message
 

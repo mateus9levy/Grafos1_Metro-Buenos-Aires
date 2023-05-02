@@ -573,84 +573,84 @@ const Graphs = [
     {
         id: "78",
         name: "Facultad de Derecho Julieta Lanteri",
-        line: "E",
+        line: "H",
         color: "Amarela",
         list_neighbor: [79]
     },
     {
         id: "79",
         name: "Las Heras",
-        line: "E",
+        line: "H",
         color: "Amarela",
         list_neighbor: [78, 80]
     },
     {
         id: "80",
         name: "Santa Fe Carlos Jáuregui", //A    
-        line: "E",
+        line: "H",
         color: "Amarela",
         list_neighbor: [79,49]
     },
     {
         id: "81",
         name: "Córdoba",
-        line: "E",
+        line: "H",
         color: "Amarela",
         list_neighbor: [82,49]
     },
     {
         id: "82",
         name: "Corrientes",    //A
-        line: "E",
+        line: "H",
         color: "Amarela",
         list_neighbor: [81, 25]
     },
     {
         id: "83",
         name: "Once - 30 de Deciembre", //A   
-        line: "E",
+        line: "H",
         color: "Amarela",
         list_neighbor: [9,25]
     },
     {
         id: "84",
         name: "Venezuela",
-        line: "E",
+        line: "H",
         color: "Amarela",
         list_neighbor: [9, 85]
     },
     {
         id: "85",
         name: "Humberto 1",    //A
-        line: "E",
+        line: "H",
         color: "Amarela",
         list_neighbor: [84, 86,69]
     },
     {
         id: "86",
         name: "Inclán Mezquita Al Ahmad",
-        line: "E",
+        line: "H",
         color: "Amarela",
         list_neighbor: [85, 87,69]
     },
     {
         id: "87",
         name: "Caseros",
-        line: "E",
+        line: "H",
         color: "Amarela",
         list_neighbor: [86, 88]
     },
     {
         id: "88",
         name: "Parque Patricios",
-        line: "E",
+        line: "H",
         color: "Amarela",
         list_neighbor: [87, 89]
     },
     {
         id: "89",
         name: "Hospitales",
-        line: "E",
+        line: "H",
         color: "Amarela",
         list_neighbor: [88]
     },
